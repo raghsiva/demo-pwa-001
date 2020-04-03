@@ -9,12 +9,8 @@ class LoginScreen extends React.Component{
         this.state = {
             mofuleLinks : []
         }
-        this.logincheck = this.logincheck.bind(this)
     }
 
-    loginCheck = () =>{
-        
-    }
 
     render() {
         return (
