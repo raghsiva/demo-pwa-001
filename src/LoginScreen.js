@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import './Button.css';
+import {Redirect} from 'react-router';
 
 class LoginScreen extends React.Component{
     constructor () {
@@ -8,6 +9,11 @@ class LoginScreen extends React.Component{
         this.state = {
             mofuleLinks : []
         }
+        this.logincheck = this.logincheck.bind(this)
+    }
+
+    loginCheck = () =>{
+        
     }
 
     render() {
@@ -31,7 +37,7 @@ class LoginScreen extends React.Component{
                             
                         </form>
                     </div>    
-                    <button align = "center" class = "button">Sign In</button>
+                    <button align = "center" onClick = {this.logincheck} class = "button">Sign In</button>
                 </div>
             </div>
         )
