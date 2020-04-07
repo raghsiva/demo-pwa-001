@@ -5,6 +5,8 @@ import LoginScreen from './LoginScreen'
 import Router from './Router'
 import Location from './Location'
 import Cameraview from './Cameraview'
+import Notify from './Notify'
+import { initializeFirebase } from './Push-notification'
 function App() {
   return (
     <div className="App">
@@ -12,5 +14,5 @@ function App() {
     </div>
   );
 }
-
+initializeFirebase();
 export default App;

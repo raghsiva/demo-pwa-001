@@ -7,12 +7,15 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "firebase": "^7.13.2",
     "react": "^16.13.1",
+    "react-cam": "^1.1.11",
     "react-dom": "^16.13.1",
     "react-geocode": "^0.2.1",
     "react-html5-camera-photo": "^1.5.4",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-web-notification": "^0.7.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,5 @@
 import React from 'react'
-import Camera from 'react-html5-camera-photo'
+import {Camera} from 'react-cam'
 class Cameraview extends React.Component{
     constructor() {
         super();
