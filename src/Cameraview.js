@@ -34,7 +34,8 @@ class Cameraview extends React.Component{
     render(){
         return(
             <div>
-                <input type="file" accept="image/*" capture="camera" />
+                <Camera/> <br/> <br /> <br />
+                <button>Sign in</button>
             </div>
         );
     }
