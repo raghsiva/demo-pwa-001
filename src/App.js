@@ -4,6 +4,7 @@ import './App.css';
 import LoginScreen from './LoginScreen'
 import Router from './Router'
 import Location from './Location'
+import Camera from './Camera'
 function App() {
   return (
     <div className="App">
