@@ -47,12 +47,13 @@ class Location extends React.Component{
     render(){
         return(
             <div>
-                <button onClick = {this.getMyLocation}> Click </button>
+                <nav class = "navbar navbar-default" style = {{height : 30, fontWeight : "bold"}}>
+                    <h4 style = {{fontWeight : "bold"}}>Location Details</h4>
+                </nav><hr />
                 <div>
-                    {this.state.latitude}<br/>
-                    {this.state.longitude} <br />
                     {this.state.location}
                 </div>
+                <button align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%" }}onClick = {this.getMyLocation}> Click </button>
             </div>
         );
     }
