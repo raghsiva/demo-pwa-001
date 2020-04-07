@@ -1,6 +1,6 @@
 import React from 'react'
-
-class Camera extends React.Component{
+import Camera from 'react-html5-camera-photo'
+class Cameraview extends React.Component{
     constructor() {
         super();
     }
@@ -8,10 +8,10 @@ class Camera extends React.Component{
     render(){
         return(
             <div>
-                <input type="file" accept="image/*" capture="camera" />
+                <Camera />
             </div>
         );
     }
 }
 
-export default Camera;
+export default Cameraview;

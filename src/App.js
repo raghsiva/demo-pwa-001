@@ -4,11 +4,11 @@ import './App.css';
 import LoginScreen from './LoginScreen'
 import Router from './Router'
 import Location from './Location'
-import Camera from './Camera'
+import Cameraview from './Cameraview'
 function App() {
   return (
     <div className="App">
-      <Location />
+      <Cameraview />
     </div>
   );
 }
