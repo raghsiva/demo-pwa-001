@@ -3,6 +3,8 @@ import './App.css';
 import './Button.css';
 import Geocode from "react-geocode";
 import axios from 'axios'
+
+import MapGL, {GeolocateControl } from 'react-map-gl'
 class Location extends React.Component{
     constructor (){
         super();
@@ -12,7 +14,11 @@ class Location extends React.Component{
             location : ''
         }
     }
-
+    geolocateStyle = {
+        float: 'left',
+        margin: '50px',
+        padding: '10px'
+      }
     getMyLocation = () => {
         const location = window.navigator && window.navigator.geolocation
         var lat  = ''
@@ -42,18 +48,25 @@ class Location extends React.Component{
         
     
       }
-
-      
+    openMaps = () => {
+        window.open("https://google.maps.com/@" + this.state.latitude + "," + this.state.longitude)
+    }  
     render(){
         return(
-            <div>
+            <div height = "100%">
                 <nav class = "navbar navbar-default" style = {{height : 30, fontWeight : "bold"}}>
-                    <h4 style = {{fontWeight : "bold"}}>Location Details</h4>
+                    <h4 style = {{fontWeight : "bold"}}>Store Locator</h4>
                 </nav><hr />
                 <div class = "App">
-                    {this.state.location}
-                </div><br /> <br /> <br /> <br /> <br />
-                <button align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%" }}onClick = {this.getMyLocation}> Click </button>
+                    {this.state.location?<h1>Your location is : <br/></h1>:<div></div>}
+                   <p style = {{fontWeight : "bold"}}>{this.state.location}</p>
+                </div>
+                <div>
+                    {this.state.location?
+                    <a onClick = {this.openMaps}>Open in Maps</a> : <div></div>}
+                </div>
+                <br /> <br /> <br /> <br /> <br /> <br/> <br/> 
+                <button class = "button" align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%", marginTop : "250px" }}onClick = {this.getMyLocation}> Click </button>
             </div>
         );
     }

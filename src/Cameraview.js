@@ -1,5 +1,6 @@
 import React from 'react'
 import {Camera} from 'react-cam'
+import './Button.css'
 class Cameraview extends React.Component{
     constructor() {
         super();
@@ -39,11 +40,12 @@ class Cameraview extends React.Component{
         return(
             <div>
                 <nav class = "navbar navbar-default" style = {{height : 30, fontWeight : "bold"}}>
-                    <h4 style = {{fontWeight : "bold"}}>Camera</h4>
+                    <h4 style = {{fontWeight : "bold"}}>Scan Item</h4>
                 </nav><hr />
+                <br/>
                 <Camera front={false} width = "100%" heigth = "50%"/> <br/> <br /> <br />
                 
-                <button onClick = {this.handleClick}>Back</button>
+                <button class = "button" onClick = {this.handleClick}>Back</button>
             </div>
         );
     }

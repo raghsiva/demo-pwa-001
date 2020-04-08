@@ -13,6 +13,7 @@
     "react-dom": "^16.13.1",
     "react-geocode": "^0.2.1",
     "react-html5-camera-photo": "^1.5.4",
+    "react-map-gl": "^5.2.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-web-notification": "^0.7.0"
