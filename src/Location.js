@@ -62,7 +62,7 @@ class Location extends React.Component{
                    <p style = {{fontWeight : "bold"}}>{this.state.location}</p>
                 </div>
                 <br /> <br /> <br /> <br /> 
-                <button class = "button" align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%", marginTop : "250px" }}onClick = {this.getMyLocation}> Click </button>
+                <button class = "button" align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%", marginTop : "250px" }}onClick = {this.getMyLocation}> Locate </button>
             </div>
         );
     }
