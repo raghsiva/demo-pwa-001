@@ -61,10 +61,6 @@ class Location extends React.Component{
                     {this.state.location?<h1>Your nearest store location is : <br/></h1>:<div></div>}
                    <p style = {{fontWeight : "bold"}}>{this.state.location}</p>
                 </div>
-                <div>
-                    {this.state.location?
-                    <a onClick = {this.openMaps} style = {{color : 'blue'}}>Open in Maps</a> : <div></div>}
-                </div>
                 <br /> <br /> <br /> <br /> 
                 <button class = "button" align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%", marginTop : "250px" }}onClick = {this.getMyLocation}> Click </button>
             </div>
