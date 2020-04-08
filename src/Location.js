@@ -50,9 +50,9 @@ class Location extends React.Component{
                 <nav class = "navbar navbar-default" style = {{height : 30, fontWeight : "bold"}}>
                     <h4 style = {{fontWeight : "bold"}}>Location Details</h4>
                 </nav><hr />
-                <div>
+                <div class = "App">
                     {this.state.location}
-                </div>
+                </div><br /> <br /> <br /> <br /> <br />
                 <button align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%" }}onClick = {this.getMyLocation}> Click </button>
             </div>
         );

@@ -31,11 +31,19 @@ class Cameraview extends React.Component{
           }
     }
 
+    handleClick = () => {
+      window.open("/selectScreen", "_self")
+    }
+
     render(){
         return(
             <div>
-                <Camera front={false}/> <br/> <br /> <br />
-                <button>Sign in</button>
+                <nav class = "navbar navbar-default" style = {{height : 30, fontWeight : "bold"}}>
+                    <h4 style = {{fontWeight : "bold"}}>Camera</h4>
+                </nav><hr />
+                <Camera front={false} width = "30%"/> <br/> <br /> <br />
+                
+                <button onClick = {this.handleClick}>Back</button>
             </div>
         );
     }

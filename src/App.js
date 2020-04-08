@@ -10,7 +10,7 @@ import { initializeFirebase } from './Push-notification'
 function App() {
   return (
     <div className="App">
-      <Cameraview />
+      <Router />
     </div>
   );
 }

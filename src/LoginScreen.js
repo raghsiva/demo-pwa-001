@@ -14,8 +14,10 @@ class LoginScreen extends React.Component{
     }
 
     check = () =>{
-            if(this.state.username === "verizon" && this.state.password === "verizon")
-            window.open("/myDevices", "_self")
+            if(this.state.username === "verizon" && this.state.password === "verizon"){
+                window.localStorage.setItem('rememberMe', "yes")
+                window.open("/selectScreen", "_self")
+            }
             else {
                 alert('Invalid Credentials')
             }
