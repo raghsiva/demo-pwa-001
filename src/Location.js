@@ -49,7 +49,7 @@ class Location extends React.Component{
     
       }
     openMaps = () => {
-        window.open("https://google.maps.com/@" + this.state.latitude + "," + this.state.longitude)
+        window.open("https://google.com/maps/@" + this.state.latitude + "," + this.state.longitude)
     }  
     render(){
         return(
@@ -58,14 +58,14 @@ class Location extends React.Component{
                     <h4 style = {{fontWeight : "bold"}}>Store Locator</h4>
                 </nav><hr />
                 <div class = "App">
-                    {this.state.location?<h1>Your location is : <br/></h1>:<div></div>}
+                    {this.state.location?<h1>Your nearest store location is : <br/></h1>:<div></div>}
                    <p style = {{fontWeight : "bold"}}>{this.state.location}</p>
                 </div>
                 <div>
                     {this.state.location?
-                    <a onClick = {this.openMaps}>Open in Maps</a> : <div></div>}
+                    <a onClick = {this.openMaps} style = {{color : 'blue'}}>Open in Maps</a> : <div></div>}
                 </div>
-                <br /> <br /> <br /> <br /> <br /> <br/> <br/> 
+                <br /> <br /> <br /> <br /> 
                 <button class = "button" align = "center" style = {{postion: "absolute", bottom : "5%", right : "25%", left : "27%", marginTop : "250px" }}onClick = {this.getMyLocation}> Click </button>
             </div>
         );
