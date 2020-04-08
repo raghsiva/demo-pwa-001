@@ -41,7 +41,7 @@ class Cameraview extends React.Component{
                 <nav class = "navbar navbar-default" style = {{height : 30, fontWeight : "bold"}}>
                     <h4 style = {{fontWeight : "bold"}}>Camera</h4>
                 </nav><hr />
-                <Camera front={false} width = "30%"/> <br/> <br /> <br />
+                <Camera front={false} width = "100%" heigth = "50%"/> <br/> <br /> <br />
                 
                 <button onClick = {this.handleClick}>Back</button>
             </div>

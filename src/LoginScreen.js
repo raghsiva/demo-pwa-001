@@ -9,13 +9,16 @@ class LoginScreen extends React.Component{
         this.state = {
             mofuleLinks : [],
             username : "",
-            password : ""
+            password : "",
+            rememberMe : false
         }
     }
 
     check = () =>{
             if(this.state.username === "verizon" && this.state.password === "verizon"){
+                if(this.state.rememberMe === true){
                 window.localStorage.setItem('rememberMe', "yes")
+                }
                 window.open("/selectScreen", "_self")
             }
             else {
@@ -26,6 +29,12 @@ class LoginScreen extends React.Component{
     handleChange = (e) => {
         this.setState({
             [e.target.name] : e.target.value
+        })
+    }
+
+    checkBox = (e) => {
+        this.setState({
+            rememberMe : !this.state.rememberMe
         })
     }
     render() {
@@ -45,8 +54,10 @@ class LoginScreen extends React.Component{
                             <div class = "div1">
                                 <label> Password</label>
                             </div>
-                            <input type = "password" name = "password" onChange = {this.handleChange} style = {{width : "100%", height : "40px", "borderRadius" : "15px"}}/><br /> <br /> <br /> <br />
-                            
+                            <input type = "password" name = "password" onChange = {this.handleChange} style = {{width : "100%", height : "40px", "borderRadius" : "15px"}}/> <br />
+                            <div class = "div1">
+                            <input type="checkbox" onChange = {this.checkBox} name="rememberMe" value="Remember me"></input> Remember Me
+                            </div> <br/> <br />
                         </form>
                     </div>    
                     <button align = "center" onClick = {this.check} class = "button">Sign In</button>
